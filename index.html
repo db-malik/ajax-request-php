@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Search for a customer</title>
+		<meta
+			name="description"
+			content="Exercice d'application de requêtes AJAX sur la base de données Classic Models"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="http://fonts.googleapis.com/css?family=Open+Sans"
+		/>
+		<link href="css/lib/normalize.css" rel="stylesheet" />
+		<link href="css/lib/all.min.css" rel="stylesheet" />
+		<link href="css/lib/layout-3wa.css" rel="stylesheet" />
+		<link href="css/lib/theme-corporate.css" rel="stylesheet" />
+		<link href="css/search-customer.css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/events.js"></script>
+		<script src="js/ajax.js"></script>
+		<script src="js/customers.js"></script>
+	</head>
+	<body>
+		<header class="banner">
+			<a class="banner-link" href="">
+				<strong class="banner-title">Search for a customer</strong>
+				<small>Module JS3</small>
+			</a>
+		</header>
+
+		<main class="project">
+			<header class="project-header bg-accent">
+				<h1>Mise à jour des fiches clients Classic Models</h1>
+				<ol class="list-unstyled">
+					<li>Rechercher un client dans la base à partir de son nom</li>
+					<li>Modifier en 3 clics les données d'un client particulier</li>
+				</ol>
+			</header>
+			<div class="container-fluid project-section">
+				<section class="customer-search">
+					<h2>Rechercher un client</h2>
+					<form id="search-form">
+						<div class="field-group">
+							<label for="search-customer">Nom du client</label>
+							<input
+								type="search"
+								name="search-customer"
+								id="search-customer"
+								aria-describedby="info"
+							/>
+							<p class="field-text-help" id="info">
+								En saisissant les premières lettres, vous obtiendrez la liste
+								des clients correspondants
+							</p>
+						</div>
+					</form>
+					<ul id="results" class="list-unstyled"></ul>
+				</section>
+				<section id="customer-details" class="hide customer-details"></section>
+			</div>
+		</main>
+
+		<footer class="mentions">
+			<a rel="license" href="https://github.com/db-malik"
+				><img
+					alt="logo MD"
+					src="./img/vecteezy_-md-logo//vecteezy_initial-letter-md-logo-template-design_5391351.jpg"
+			/></a>
+			<br />
+			<span>source code in </span>
+			<a href="https://github.com/db-malik"> https://github.com/db-malik </a>
+			<br />
+			<span>E-mail : </span>
+			<a href="dbmalek91@gmail.com"> dbmalek91@gmail.com</a>
+		</footer>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>
