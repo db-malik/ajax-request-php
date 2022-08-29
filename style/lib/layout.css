@@ -1,28 +1,10 @@
-/* ***************************************************************************************
-	La propriété box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculée
-	htprojects://developer.mozilla.org/fr/docs/Web/CSS/box-sizing
-
-	Tous les éléments HTML incluent leur padding et leur bordure éventuels dans leur taille
-*******************************************************************************************  */
-* {
+******************************************************************** */ * {
 	box-sizing: border-box;
 }
 
-/* ***************************************************************************************
-  Définir la taille de police par défaut
-  htproject://www.pompage.net/traduction/dimensionner-ses-fontes-avec-rem
-  htprojects://developer.mozilla.org/fr/docs/Web/CSS/font-size
-
-  L'unité de police rem (qui signifie « root em ») se raporte à la taille définie par défaut,
-  soit celle de la balise HTML (16px par défaut definit dans les préférences du navigateur)
-
-  Définir la taille par défaut à 10px (1rem = 10px)
-	puis ramener à 16px sur body soit 1.6rem
-******************************************************************************************* */
-
 html {
-	font-size : 62.5%;
-	scroll-behavior : smooth;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 /* ***************************************************************************************
@@ -30,8 +12,8 @@ html {
 ******************************************************************************************* */
 
 body {
-	font-size : 1.6rem;
-	line-height : 1.4;
+	font-size: 1.6rem;
+	line-height: 1.4;
 }
 
 a {
@@ -44,24 +26,25 @@ a:active {
 	text-decoration: underline;
 }
 
-p, li {
-	line-height : 1.6;
+p,
+li {
+	line-height: 1.6;
 }
 
 code {
-	display : inline-block;
-	margin : 0 0.5rem;
-	padding : 0 0.5rem;
+	display: inline-block;
+	margin: 0 0.5rem;
+	padding: 0 0.5rem;
 	background: #222;
-	border : 1px solid #111;
+	border: 1px solid #111;
 	border-radius: 5px;
-	color : #fff;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	color: #fff;
+	font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
 hr {
-	margin : 2em 0;
-	border : 1px solid #ddd;
+	margin: 2em 0;
+	border: 1px solid #ddd;
 }
 
 dt {
@@ -69,71 +52,56 @@ dt {
 }
 
 dd {
-	margin : 0;
+	margin: 0;
 }
 
 figure {
-	margin-right : 0;
-	margin-left : 0;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 img,
 video {
 	max-width: 100%;
-	height : auto;
+	height: auto;
 	vertical-align: middle;
 }
 
-/* ***************************************************************************************
-	LAYOUT
-
-	Un pied de page (mentions 3WA) qui reste à sa place,
-	grâce à un body adoptant la grid attitude en direction verticale
-	faisant au minimum la hauteur du viewport (voire plus, si son contenu le nécessite)
-
-******************************************************************************************* */
-
 body {
 	position: relative;
-	min-height : 100vh;
-	display : flex;
+	min-height: 100vh;
+	display: flex;
 	flex-direction: column;
 }
 
-/* ***************************************************************************************
-	BANNIERE
-	Une bannière qui situe l'exercice dans un project de formation
-******************************************************************************************* */
-
 .banner {
-	padding : 1rem 1em;
+	padding: 1rem 1em;
 }
 
 .banner-link {
-	display : inline-block;
-	margin-right : 2%;
-	margin-left : 2%;
+	display: inline-block;
+	margin-right: 2%;
+	margin-left: 2%;
 	will-change: transform;
-	transition : transform 0.5s , color 0.5s;
+	transition: transform 0.5s, color 0.5s;
 }
 
 .banner-link:hover {
-	transform : scale(1.2);
+	transform: scale(1.2);
 	text-decoration: none;
 }
 
 .banner-title {
-	display : block;
-	font-size : 1.5em;
+	display: block;
+	font-size: 1.5em;
 }
 
-
 .banner-nav-link {
-	display : block;
-	margin : 1em;
+	display: block;
+	margin: 1em;
 	text-align: center;
-	transition : all 0.5s;
-	text-decoration : none;
+	transition: all 0.5s;
+	text-decoration: none;
 }
 
 .banner-nav-link:hover,
@@ -142,43 +110,38 @@ body {
 	text-decoration: none;
 }
 
-@media screen and (min-width : 1024px) {
+@media screen and (min-width: 1024px) {
 	.banner {
-		display : flex;
+		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 	}
 
 	.banner-nav-link {
 		display: inline-block;
-		margin : 0 1em;
+		margin: 0 1em;
 	}
 }
 
-/* ***************************************************************************************
-	FOOTER
-	Mentions 3wa
-******************************************************************************************* */
-
 .mentions {
 	position: relative;
-	margin : auto 0 0;
-	padding : 1rem 1em;
+	margin: auto 0 0;
+	padding: 1rem 1em;
 	text-align: center;
 }
 
 .mentions > * {
-	margin : 0;
+	margin: 0;
 }
 
 .goTop {
 	position: absolute;
-	top : 1rem;
-	right : 1em;
-	height : 1.4em;
-	width : 1.4em;
+	top: 1rem;
+	right: 1em;
+	height: 1.4em;
+	width: 1.4em;
 	line-height: 1.4;
-	font-size : 2em;
+	font-size: 2em;
 	font-weight: bold;
 	border-radius: 0.5rem;
 	transition: all 0.25s;
@@ -187,33 +150,27 @@ body {
 .goTop:hover,
 .goTop:focus {
 	text-decoration: none;
-	transform : scale(1.1) translateY(-0.25em);
+	transform: scale(1.1) translateY(-0.25em);
 }
 
-
-
-/* ***************************************************************************************
-	CLASSES UTILITAIRES
-******************************************************************************************* */
-
 .container {
-	width : 100%;
-	max-width : 1140px;
-	margin-right : auto;
-	margin-left  : auto;
-	padding-right : 2rem;
-	padding-left : 2rem;
+	width: 100%;
+	max-width: 1140px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 2rem;
+	padding-left: 2rem;
 }
 
 .container-fluid {
-	padding-right : 2rem;
-	padding-left : 2rem;
+	padding-right: 2rem;
+	padding-left: 2rem;
 }
 
 .is-hidden,
 .is-hide,
 .hide {
-	display : none;
+	display: none;
 }
 
 .text-center {
@@ -226,39 +183,35 @@ body {
 
 .list-unstyled {
 	list-style: none;
-	padding-left : 0;
+	padding-left: 0;
 }
 
 .list-unstyled li {
-	padding : 0;
+	padding: 0;
 }
 
-
-/* ***************************************************************************************
-	FORMULAIRES
-******************************************************************************************* */
 fieldset {
-	padding : 2rem;
+	padding: 2rem;
 	border: 1px solid #ccc;
 	border-radius: 0.5rem;
 }
 
 fieldset > :last-child {
-	margin-bottom : 0;
+	margin-bottom: 0;
 }
 
 legend {
 	display: block;
-	padding : 0.5rem 1rem;
-	font-size : 1.2em;
+	padding: 0.5rem 1rem;
+	font-size: 1.2em;
 	font-weight: 600;
-	border-radius : 0.5rem;
+	border-radius: 0.5rem;
 }
 
 label {
 	display: inline-block;
-	margin-bottom: .25rem;
-	cursor : pointer;
+	margin-bottom: 0.25rem;
+	cursor: pointer;
 }
 
 label + label {
@@ -281,12 +234,12 @@ input[type="week"],
 select,
 textarea {
 	display: block;
-	width : 100%;
-	margin : 0;
-	padding : 0.5em;
-	border-radius : 0.5rem;
-	border-style : solid;
-	border-width : 1px;
+	width: 100%;
+	margin: 0;
+	padding: 0.5em;
+	border-radius: 0.5rem;
+	border-style: solid;
+	border-width: 1px;
 	vertical-align: middle;
 }
 
@@ -296,8 +249,8 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-	margin : 0 0.5rem;
-  vertical-align: middle;
+	margin: 0 0.5rem;
+	vertical-align: middle;
 }
 
 form :focus {
@@ -305,53 +258,53 @@ form :focus {
 }
 
 [disabled] {
-	opacity: .5;
+	opacity: 0.5;
 	cursor: not-allowed;
 }
 
 .field-list {
 	list-style: none;
-	margin : 1em 0;
-	padding : 0;
+	margin: 1em 0;
+	padding: 0;
 }
 
 .field-list li,
 .field-group {
-	margin-bottom : 1em;
+	margin-bottom: 1em;
 	padding: 0;
 }
 
 .field-group-choice {
-	padding : 1rem;
-	border-radius : 0.5rem;
+	padding: 1rem;
+	border-radius: 0.5rem;
 }
 
 .field-group-choice legend {
-	padding : 0;
-	border : none;
-	background : transparent;
-	color : currentColor;
-	font-size : 1.6rem;
+	padding: 0;
+	border: none;
+	background: transparent;
+	color: currentColor;
+	font-size: 1.6rem;
 }
 
 .field-group-text {
-	margin : 0;
-	font-size : 1.1em;
+	margin: 0;
+	font-size: 1.1em;
 }
 
 .field-text-help {
-	margin : 0;
-	font-size : 0.9em;
+	margin: 0;
+	font-size: 0.9em;
 }
 
 .field-text-error {
-	margin : 0;
-	font-size : 0.9em;
+	margin: 0;
+	font-size: 0.9em;
 	font-weight: 600;
 }
 
 .field-error {
-	border : 1px solid rgb(222, 88, 51);
+	border: 1px solid rgb(222, 88, 51);
 }
 
 .form-button {
@@ -360,7 +313,7 @@ form :focus {
 
 .btn {
 	display: inline-block;
-	padding : 0.6em;
+	padding: 0.6em;
 	border-radius: 0.25em;
 	line-height: 0.7;
 }
@@ -371,5 +324,5 @@ form :focus {
 }
 
 .btn-lg {
-	font-size : 1.5em;
+	font-size: 1.5em;
 }
