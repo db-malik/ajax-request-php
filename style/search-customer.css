@@ -1,59 +1,58 @@
 .customer-search {
-  margin : 0 2.5%;
+	margin: 0 2.5%;
+}
+.mentions img {
+	width: 10vw;
 }
 
-@media screen and (min-width : 1200px) {
-  .project-section {
-  	display : flex;
-  	align-items : start;
-  }
+@media screen and (min-width: 1200px) {
+	.project-section {
+		display: flex;
+		align-items: start;
+	}
 
-  .customer-search {
-    width : calc(100%/3 - 5%);
-  }
+	.customer-search {
+		width: calc(100% / 3 - 5%);
+	}
 
-  .customer-details {
-    width : 70%;
-  }
+	.customer-details {
+		width: 70%;
+	}
 
-  .customer-details > * {
-    width : 45%;
-    margin : 0 2.5%;
-  }
-
+	.customer-details > * {
+		width: 45%;
+		margin: 0 2.5%;
+	}
 }
 
-@media screen and (min-width : 834px) {
+@media screen and (min-width: 834px) {
+	.customer-details {
+		display: flex;
+		align-items: start;
+	}
 
-  .customer-details {
-    display : flex;
-    align-items : start;
-  }
-
-  .customer-details > * {
-    width : 45%;
-    margin : 0 2.5%;
-  }
-
+	.customer-details > * {
+		width: 45%;
+		margin: 0 2.5%;
+	}
 }
-
-
 
 .customer-details > div {
-  position: relative;
+	position: relative;
 }
 
 .close-button {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  text-decoration: none;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	text-decoration: none;
 }
 
-.btn, .close-button {
-  font-size : 1.5em;
+.btn,
+.close-button {
+	font-size: 1.5em;
 }
 
 .edit-button {
-  float : right;
+	float: right;
 }
