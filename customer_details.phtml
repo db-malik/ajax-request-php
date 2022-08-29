@@ -1,0 +1,79 @@
+<div class="bg-default">
+  <h2><?=htmlspecialchars($customer['customerName']);?></h2>
+  <a href="#" class="close-button"><i class="far fa-times-circle"></i></a>
+  <dl>
+    <dt><i class="fas fa-user" aria-hidden="true"></i> Contact</dt>
+    <dd><?=htmlspecialchars($customer['contactFirstName']);?> <?=htmlspecialchars($customer['contactLastName']);?></dd>
+  </dl>
+  <dl>
+    <dt><i class="fas fa-phone-square-alt" aria-hidden="true"></i> Phone</dt>
+    <dd><?=htmlspecialchars($customer['phone']);?></dd>
+  </dl>
+  <dl>
+    <dt><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Address</dt>
+    <dd>
+      <address>
+        <?=htmlspecialchars($customer['addressLine1']);?> <?=htmlspecialchars($customer['addressLine2']);?><br>
+        <?=htmlspecialchars($customer['postalCode']);?> <?=htmlspecialchars($customer['city']);?>
+      </address>
+    </dd>
+  </dl>
+  <dl>
+    <dt><i class="fas fa-globe-americas" aria-hidden="true"></i> Country</dt>
+    <dd><?=htmlspecialchars($customer['country']);?></dd>
+  </dl>
+  <a href="#" class="btn edit-button" aria-label="Editer le contact"><i class="far fa-edit" aria-hidden="true"></i></a>
+</div>
+<form class="hide bg-dark">
+  <input type="hidden" name="customer-number" value="<?=intval($customer['customerNumber']);?>">
+  <fieldset>
+    <legend>Données client</legend>
+    <ul class="field-list">
+        <li>
+            <label for="customer-name">Nom de la société</label>
+            <input type="text" id="customer-name" name="customer-name" value="<?=htmlspecialchars($customer['customerName']);?>">
+        </li>
+        <li>
+            <label for="customer-address-line1">Adresse (1)</label>
+            <input type="text" id="customer-address-line1" name="customer-address-line1" value="<?=htmlspecialchars($customer['addressLine1']);?>">
+        </li>
+        <li>
+            <label for="customer-address-line2">Adresse (2)</label>
+            <input type="text" id="customer-address-line2" name="customer-address-line2" value="<?=htmlspecialchars($customer['addressLine2']);?>">
+        </li>
+        <li>
+            <label for="customer-postal-code">Code postal</label>
+            <input type="text" id="customer-postal-code" name="customer-postal-code" value="<?=htmlspecialchars($customer['postalCode']);?>">
+        </li>
+        <li>
+            <label for="customer-city">Ville</label>
+            <input type="text" id="customer-city" name="customer-city" value="<?=htmlspecialchars($customer['city']);?>">
+        </li>
+        <li>
+            <label for="customer-country">Pays</label>
+            <input type="text" id="customer-country" name="customer-country" value="<?=htmlspecialchars($customer['country']);?>">
+        </li>
+    </ul>
+    <fieldset>
+        <legend>Contact</legend>
+        <ul class="field-list">
+            <li>
+                <label for="contact-firstname">Prénom du contact client</label>
+                <input type="text" id="contact-firstname" name="contact-firstname" value="<?=htmlspecialchars($customer['contactFirstName']);?>">
+            </li>
+            <li>
+                <label for="contact-lastname">Nom du contact client</label>
+                <input type="text" id="contact-lastname" name="contact-lastname" value="<?=htmlspecialchars($customer['contactLastName']);?>">
+            </li>
+            <li>
+                <label for="contact-tel">Téléphone du contact client</label>
+                <input type="tel" id="contact-tel" name="contact-tel" value="<?=htmlspecialchars($customer['phone']);?>">
+            </li>
+        </ul>
+    </fieldset>
+
+    <p class="form-button">
+      <button class="btn bnt-lg" type="button">Valider</button>
+    </p>
+  </fieldset>
+</form>
