@@ -8,4 +8,4 @@ Fonctionalities:
 
 2 - Display detailed information of a customer on click on a search result.
 
-3 - Modify customer data from a form.
+3 - Modify customer data.
